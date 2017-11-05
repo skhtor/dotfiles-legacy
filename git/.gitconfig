@@ -1,0 +1,53 @@
+[user]
+    name = Sassoon Kuyumcian
+    email = sassoon.kuyumcian@auspost.com.au
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = cyan
+[alias]
+	co = checkout
+  br = branch
+  df = diff
+  dc = diff --cached
+  ci = commit
+  lg = log -p
+  st = status
+  unstage = reset HEAD --
+	unci = reset --soft HEAD~
+	poh = push origin HEAD
+	ap = add -p
+	uncihard = reset --hard HEAD~
+	last = log -1 HEAD
+  slist = stash list
+  sclear = stash clear
+  sshow = !sh -c 'git stash show stash^{/$*} -p' -
+  sapply = !sh -c 'git stash apply stash^{/$*}' -
+  ssave = !sh -c 'git stash save "${1}"' -
+	spop = stash pop
+	bd = branch -D
+[push]
+	default = matching
+[credential]
+	helper = store
+[core]
+	excludesfile = /Users/kuyumcians/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

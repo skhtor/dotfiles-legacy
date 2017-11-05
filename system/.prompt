@@ -1,0 +1,12 @@
+# Git branch shown on prompt
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+if [ -f ~/dotfiles/git/.git-completion.bash ]; then
+    . ~/dotfiles/git/.git-completion.bash
+fi
+
+# Prompt customisation
+export PS1="\[\e[0;32m\]-- \[\e[0;37m\]\w\[\e[0;36m\]\$(parse_git_branch) \[\e[0;32m\]--> \[\e[0;37m\]"
+export PS2='\[\e[0;32m\]--> \[\e[0;37m\]'

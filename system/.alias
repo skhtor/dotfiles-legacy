@@ -1,0 +1,28 @@
+# Dotfile shortcuts
+alias dfs='cd ~/dotfiles'
+alias dfs_install='~/dotfiles/install.sh'
+alias dfs_alias='vim ~/dotfiles/system/.alias'
+alias dfs_env='vim ~/dotfiles/system/.env'
+alias dfs_function='vim ~/dotfiles/system/.function'
+alias dfs_path='vim ~/dotfiles/system/.path'
+alias dfs_prompt='vim ~/dotfiles/system/.prompt'
+
+# File/folder shortcuts
+alias uni='cd ~/uni'
+alias repos='cd ~/repos'
+
+# Unix shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ll='ls -la'
+alias rr='rm -rf'
+
+# Scripts
+alias gitpullall="~/scripts/gitpullall.sh"
+alias gitmerge="~/scripts/merge.sh"
+
+# Useful commands
+alias resetlaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock'
+alias showhiddent='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
+alias showhiddenf='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
+alias deleteds='find ~ -name ".DS_Store" -delete'
